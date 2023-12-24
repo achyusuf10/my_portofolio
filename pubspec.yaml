@@ -1,0 +1,47 @@
+name: my_portofolio
+description: "A new Flutter project."
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+
+dependencies:
+  carousel_slider: ^4.2.1
+  cupertino_icons: ^1.0.2
+  flutter:
+    sdk: flutter
+  flutter_animate: ^4.3.0
+  flutter_screenutil: ^5.9.0
+  flutter_svg: ^2.0.9
+  get: ^4.6.6
+  flutter_html: ^3.0.0-beta.2
+  url_launcher: ^6.2.2
+  scrollable_positioned_list: ^0.3.8
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+  # example:
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/inter/Inter-Light.ttf
+          weight: 300
+        - asset: assets/fonts/inter/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/inter/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/inter/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/inter/Inter-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/inter/Inter-ExtraBold.ttf
+          weight: 800
