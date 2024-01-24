@@ -12,7 +12,6 @@ class AppTextStyles {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w400,
         height: 24 / 16,
-        letterSpacing: 0,
       );
 
   static TextStyle get body2SemiBoldAll => TextStyle(
@@ -22,7 +21,6 @@ class AppTextStyles {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w700,
         height: 24 / 16,
-        letterSpacing: 0,
       );
 
   static TextStyle get body2MediumAll => TextStyle(
@@ -32,7 +30,6 @@ class AppTextStyles {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w500,
         height: 24 / 16,
-        letterSpacing: 0,
       );
 
   static TextStyle get body2NormalAllUnderline => TextStyle(
@@ -41,7 +38,6 @@ class AppTextStyles {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w400,
         height: 24 / 16,
-        letterSpacing: 0,
       );
 
   static TextStyle get body3NormalAll => TextStyle(
@@ -51,7 +47,6 @@ class AppTextStyles {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w400,
         height: 20 / 14,
-        letterSpacing: 0,
       );
 
   static TextStyle get body3MediumAll => TextStyle(
@@ -61,7 +56,6 @@ class AppTextStyles {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w500,
         height: 20 / 14,
-        letterSpacing: 0,
       );
 }
 
@@ -73,7 +67,6 @@ class AppTextStyleTablet {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w700,
         height: 48 / 48,
-        letterSpacing: -2,
       );
 }
 
@@ -85,7 +78,6 @@ class AppTextStyleMobile {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w700,
         height: 40 / 36,
-        letterSpacing: 0,
       );
 }
 
@@ -97,7 +89,6 @@ class AppTextStyleTabletMobile {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w700,
         height: 28 / 18,
-        letterSpacing: -2,
       );
   static TextStyle get headingH3SemiBold => TextStyle(
         fontSize: 24.sp,
@@ -106,7 +97,6 @@ class AppTextStyleTabletMobile {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w700,
         height: 32 / 24,
-        letterSpacing: -2,
       );
   static TextStyle get headingH3Bold => TextStyle(
         fontSize: 24.sp,
@@ -115,7 +105,6 @@ class AppTextStyleTabletMobile {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w700,
         height: 32 / 24,
-        letterSpacing: -2,
       );
   static TextStyle get subtitleNormal => TextStyle(
         fontSize: 18.sp,
@@ -124,7 +113,6 @@ class AppTextStyleTabletMobile {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w400,
         height: 28 / 18,
-        letterSpacing: 0,
       );
   static TextStyle get subtitleSemiBold => TextStyle(
         fontSize: 18.sp,
@@ -133,7 +121,6 @@ class AppTextStyleTabletMobile {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w700,
         height: 28 / 18,
-        letterSpacing: 0,
       );
   static TextStyle get body1Normal => TextStyle(
         fontSize: 16.sp,
@@ -142,7 +129,6 @@ class AppTextStyleTabletMobile {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w400,
         height: 24 / 16,
-        letterSpacing: 0,
       );
 }
 
@@ -154,7 +140,6 @@ class AppTextStyleDesktop {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w700,
         height: 72 / 60,
-        letterSpacing: -2,
       );
   static TextStyle get headingH2SemiBold => TextStyle(
         fontSize: 36.sp,
@@ -163,7 +148,6 @@ class AppTextStyleDesktop {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w700,
         height: 40 / 36,
-        letterSpacing: -2,
       );
   static TextStyle get headingH3SemiBold => TextStyle(
         fontSize: 30.sp,
@@ -172,7 +156,6 @@ class AppTextStyleDesktop {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w700,
         height: 36 / 30,
-        letterSpacing: -2,
       );
   static TextStyle get headingH3Bold => TextStyle(
         fontSize: 30.sp,
@@ -181,7 +164,6 @@ class AppTextStyleDesktop {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w700,
         height: 36 / 30,
-        letterSpacing: -2,
       );
   static TextStyle get subtitleNormal => TextStyle(
         fontSize: 20.sp,
@@ -190,7 +172,6 @@ class AppTextStyleDesktop {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w400,
         height: 28 / 20,
-        letterSpacing: 0,
       );
   static TextStyle get subtitleSemiBold => TextStyle(
         fontSize: 20.sp,
@@ -199,7 +180,6 @@ class AppTextStyleDesktop {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w700,
         height: 28 / 20,
-        letterSpacing: 0,
       );
   static TextStyle get body1Normal => TextStyle(
         fontSize: 18.sp,
@@ -208,6 +188,5 @@ class AppTextStyleDesktop {
         fontStyle: FontStyle.normal,
         fontWeight: FontWeight.w400,
         height: 28 / 18,
-        letterSpacing: 0,
       );
 }

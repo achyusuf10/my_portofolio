@@ -61,6 +61,7 @@ class CardProjectTabletMobileWidget extends StatelessWidget {
                   context: context,
                 ),
                 child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
@@ -71,108 +72,14 @@ class CardProjectTabletMobileWidget extends StatelessWidget {
                     Text(
                       workModel.desc,
                       overflow: isCurrentlyShow ? null : TextOverflow.ellipsis,
-                      style: AppTextStyles.body2NormalAll,
+                      style: AppTextStyles.body2NormalAll.copyWith(
+                        fontSize: 14.sp,
+                      ),
                     ),
                     12.verticalSpace,
-                    Wrap(
-                      runSpacing: 8.h,
-                      spacing: 8.w,
-                      children: workModel.skills
-                          .extMapIndexed(
-                            (data, index) => Container(
-                              padding: const EdgeInsets.symmetric(
-                                      vertical: 4, horizontal: 20)
-                                  .dg,
-                              decoration: BoxDecoration(
-                                color: Theme.of(context)
-                                    .colorScheme
-                                    .secondaryContainer,
-                                borderRadius: BorderRadius.circular(12.r),
-                              ),
-                              child: Text(
-                                data,
-                                style: AppTextStyles.body3MediumAll,
-                              ),
-                            ),
-                          )
-                          .toList(),
-                    ),
+                    ProjectSkillsComponent(workModel: workModel),
                     const Spacer(),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        if (workModel.urlGithub.isNotEmpty)
-                          IconButton(
-                            onPressed: () {
-                              launchUrl(
-                                Uri.parse(workModel.urlGithub),
-                              );
-                            },
-                            icon: SvgPicture.asset(
-                              SvgAssetsConst.icGithub,
-                              height: 24.w,
-                              colorFilter: ColorFilter.mode(
-                                InsertColorFunc.call(
-                                  darkTheme: AppColorsDark.gray600,
-                                  lightTheme: AppColorsLight.gray600,
-                                  context: context,
-                                ),
-                                BlendMode.srcIn,
-                              ),
-                            ),
-                            constraints: const BoxConstraints(),
-                            splashRadius: 32.h,
-                            padding: const EdgeInsets.all(10).w,
-                          ),
-                        if (workModel.urlPlaystore.isNotEmpty)
-                          IconButton(
-                            onPressed: () {
-                              launchUrl(
-                                Uri.parse(workModel.urlPlaystore),
-                              );
-                            },
-                            icon: SvgPicture.asset(
-                              SvgAssetsConst.icPlaystore,
-                              height: 24.w,
-                              colorFilter: ColorFilter.mode(
-                                InsertColorFunc.call(
-                                  darkTheme: AppColorsDark.gray600,
-                                  lightTheme: AppColorsLight.gray600,
-                                  context: context,
-                                ),
-                                BlendMode.srcIn,
-                              ),
-                            ),
-                            constraints: const BoxConstraints(),
-                            splashRadius: 32.h,
-                            padding: const EdgeInsets.all(10).w,
-                          ),
-                        if (workModel.urlYoutube.isNotEmpty)
-                          IconButton(
-                            onPressed: () {
-                              launchUrl(
-                                Uri.parse(workModel.urlYoutube),
-                              );
-                            },
-                            icon: SvgPicture.asset(
-                              SvgAssetsConst.icYoutube,
-                              height: 24.w,
-                              colorFilter: ColorFilter.mode(
-                                InsertColorFunc.call(
-                                  darkTheme: AppColorsDark.gray600,
-                                  lightTheme: AppColorsLight.gray600,
-                                  context: context,
-                                ),
-                                BlendMode.srcIn,
-                              ),
-                            ),
-                            constraints: const BoxConstraints(),
-                            splashRadius: 32.h,
-                            padding: const EdgeInsets.all(10).w,
-                          ),
-                      ],
-                    ),
+                    ProjectLinksComponent(workModel: workModel),
                   ],
                 ),
               ),
@@ -180,6 +87,153 @@ class CardProjectTabletMobileWidget extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class ProjectSkillsComponent extends StatelessWidget {
+  const ProjectSkillsComponent({
+    super.key,
+    required this.workModel,
+  });
+
+  final ProjectModel workModel;
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      runSpacing: 8.h,
+      spacing: 8.w,
+      children: workModel.skills
+          .extMapIndexed(
+            (data, index) => Container(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 2, horizontal: 10).h,
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.secondaryContainer,
+                borderRadius: BorderRadius.circular(12.r),
+              ),
+              child: Text(
+                data,
+                style: AppTextStyles.body3MediumAll.copyWith(
+                  fontSize: 12.sp,
+                ),
+              ),
+            ),
+          )
+          .toList(),
+    );
+  }
+}
+
+class ProjectLinksComponent extends StatelessWidget {
+  const ProjectLinksComponent({
+    super.key,
+    required this.workModel,
+  });
+
+  final ProjectModel workModel;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        if (workModel.urlGithub.isNotEmpty)
+          IconButton(
+            onPressed: () {
+              launchUrl(
+                Uri.parse(workModel.urlGithub),
+              );
+            },
+            icon: SvgPicture.asset(
+              SvgAssetsConst.icGithub,
+              height: 24.w,
+              colorFilter: ColorFilter.mode(
+                InsertColorFunc.call(
+                  darkTheme: AppColorsDark.gray600,
+                  lightTheme: AppColorsLight.gray600,
+                  context: context,
+                ),
+                BlendMode.srcIn,
+              ),
+            ),
+            constraints: const BoxConstraints(),
+            splashRadius: 32.h,
+            padding: const EdgeInsets.all(10).w,
+          ),
+        if (workModel.urlPlaystore.isNotEmpty)
+          IconButton(
+            onPressed: () {
+              launchUrl(
+                Uri.parse(workModel.urlPlaystore),
+              );
+            },
+            icon: SvgPicture.asset(
+              SvgAssetsConst.icPlaystore,
+              height: 24.w,
+              colorFilter: ColorFilter.mode(
+                InsertColorFunc.call(
+                  darkTheme: AppColorsDark.gray600,
+                  lightTheme: AppColorsLight.gray600,
+                  context: context,
+                ),
+                BlendMode.srcIn,
+              ),
+            ),
+            constraints: const BoxConstraints(),
+            splashRadius: 32.h,
+            padding: const EdgeInsets.all(10).w,
+          ),
+        if (workModel.urlYoutube.isNotEmpty)
+          IconButton(
+            onPressed: () {
+              launchUrl(
+                Uri.parse(workModel.urlYoutube),
+              );
+            },
+            icon: SvgPicture.asset(
+              SvgAssetsConst.icYoutube,
+              height: 24.w,
+              colorFilter: ColorFilter.mode(
+                InsertColorFunc.call(
+                  darkTheme: AppColorsDark.gray600,
+                  lightTheme: AppColorsLight.gray600,
+                  context: context,
+                ),
+                BlendMode.srcIn,
+              ),
+            ),
+            constraints: const BoxConstraints(),
+            splashRadius: 32.h,
+            padding: const EdgeInsets.all(10).w,
+          ),
+        if (workModel.urlExternalLink.isNotEmpty)
+          IconButton(
+            onPressed: () {
+              launchUrl(
+                Uri.parse(workModel.urlExternalLink),
+              );
+            },
+            icon: SvgPicture.asset(
+              SvgAssetsConst.icExternalLink,
+              height: 24.w,
+              colorFilter: ColorFilter.mode(
+                InsertColorFunc.call(
+                  darkTheme: AppColorsDark.gray600,
+                  lightTheme: AppColorsLight.gray600,
+                  context: context,
+                ),
+                BlendMode.srcIn,
+              ),
+            ),
+            constraints: const BoxConstraints(),
+            splashRadius: 32.h,
+            padding: const EdgeInsets.all(10).w,
+          ),
+      ],
     );
   }
 }

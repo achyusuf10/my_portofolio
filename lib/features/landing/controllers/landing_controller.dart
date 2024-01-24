@@ -109,6 +109,26 @@ class LandingController extends GetxController {
   List<ProjectModel> works = [
     ProjectModel(
       urlImage:
+          'https://raw.githubusercontent.com/achyusuf10/assets_storage/main/portofolio/cover_nu_care_lazisnu.jpeg',
+      desc:
+          """Digital platform for easy, secure, and accountable payments of Zakat, Infaq/Sedekah, Qurban, and other donations. """
+          """Ensures transparency and professionalism in fund distribution, fostering trust and reliability in charitable contributions."""
+          """\nFeatures Worked I On Is : """
+          """Digital ID, Face Liveness, Face Matching, Prayer Schedule, Ziswaf, Manage Profile, Notification.""",
+      skills: [
+        'Flutter',
+        'GetX State Management',
+        'Firebase',
+        'VS Code',
+        'Git',
+        'Google ML Kit',
+        'Team Work',
+      ],
+      urlExternalLink: 'https://www.digitallazisnu.id/',
+      title: 'NU CARE LAZISNU',
+    ),
+    ProjectModel(
+      urlImage:
           'https://raw.githubusercontent.com/achyusuf10/assets_storage/main/portofolio/cover_pusaka.jpeg',
       desc:
           """Pusaka SuperApps is an application from the Ministry of Religion which aims"""
@@ -123,8 +143,10 @@ class LandingController extends GetxController {
         'Git',
         'Google ML Kit',
         'Team Work',
+        'Leadership',
       ],
-      title: 'Pusaka',
+      urlExternalLink: 'https://www.digitalagama.id/',
+      title: 'Pusaka Apps',
     ),
     ProjectModel(
       urlImage:
@@ -138,6 +160,8 @@ class LandingController extends GetxController {
         'Git',
       ],
       title: 'Manowa',
+      urlExternalLink:
+          'https://install.appcenter.ms/users/achyusuf10/apps/manowa/distribution_groups/production',
       urlGithub: 'https://github.com/achyusuf10/manowa_apps/tree/main',
     ),
     ProjectModel(

@@ -24,6 +24,7 @@ class LandingScreen extends StatelessWidget {
             '<Yu-Dev/>',
             style: AppTextStyleMobile.headingH1SemiBold.copyWith(
               fontSize: 30,
+              color: Theme.of(context).primaryColor,
             ),
           ),
         ),

@@ -2,8 +2,8 @@
 
 import 'dart:io';
 
-import 'generator_module.dart';
 import 'generator_helper.dart';
+import 'generator_module.dart';
 
 String rootPath = "lib/";
 String modulesPath = "${rootPath}features/";
@@ -278,3 +278,24 @@ class InputUser {
     return listFeature[tryParse];
   }
 }
+
+
+// <script type="module">
+//   // Import the functions you need from the SDKs you need
+//   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+//   // TODO: Add SDKs for Firebase products that you want to use
+//   // https://firebase.google.com/docs/web/setup#available-libraries
+
+//   // Your web app's Firebase configuration
+//   const firebaseConfig = {
+//     apiKey: "AIzaSyAB3sPxMksJT8xKA6Sjj2fTAPv4jIqd7nU",
+//     authDomain: "yu-dev-portofolio.firebaseapp.com",
+//     projectId: "yu-dev-portofolio",
+//     storageBucket: "yu-dev-portofolio.appspot.com",
+//     messagingSenderId: "617610566084",
+//     appId: "1:617610566084:web:8f213265c3d9887f02ac91"
+//   };
+
+//   // Initialize Firebase
+//   const app = initializeApp(firebaseConfig);
+// </script>

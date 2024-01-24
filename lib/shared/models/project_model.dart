@@ -6,6 +6,7 @@ class ProjectModel {
   final String urlGithub;
   final String urlYoutube;
   final String urlPlaystore;
+  final String urlExternalLink;
 
   ProjectModel({
     required this.urlImage,
@@ -15,5 +16,6 @@ class ProjectModel {
     this.urlGithub = '',
     this.urlYoutube = '',
     this.urlPlaystore = '',
+    this.urlExternalLink = '',
   });
 }
