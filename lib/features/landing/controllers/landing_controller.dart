@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_portofolio/constants/core/image_assets_const.dart';
-import 'package:my_portofolio/features/landing/view/components/desktop/about_component.dart';
-import 'package:my_portofolio/features/landing/view/components/desktop/contact_me_component.dart';
-import 'package:my_portofolio/features/landing/view/components/desktop/experience_component.dart';
-import 'package:my_portofolio/features/landing/view/components/desktop/footer_component.dart';
-import 'package:my_portofolio/features/landing/view/components/desktop/project_component.dart';
-import 'package:my_portofolio/features/landing/view/components/desktop/skills_component.dart';
+import 'package:my_portofolio/features/landing/view/components/about_component.dart';
+import 'package:my_portofolio/features/landing/view/components/contact_me_component.dart';
+import 'package:my_portofolio/features/landing/view/components/experience_component.dart';
+import 'package:my_portofolio/features/landing/view/components/footer_component.dart';
+import 'package:my_portofolio/features/landing/view/components/project_component.dart';
+import 'package:my_portofolio/features/landing/view/components/skills_component.dart';
 import 'package:my_portofolio/shared/models/experience_model.dart';
 import 'package:my_portofolio/shared/models/project_model.dart';
 import 'package:my_portofolio/shared/models/skill_model.dart';
@@ -86,7 +86,7 @@ class LandingController extends GetxController {
       title: 'Freelance Mobile Developer',
       companyName: 'Kediri App (Kediri, Indonesia)',
       urlImageCompany: ImageAssetsConst.logoKediriApp,
-      date: 'November 2022 - Present',
+      date: 'July 2022 - December 2022',
       descriptions: [
         'Designed and developed the \'My Leadership\' Android app to assess public interest in candidates. Using Flutter and GetX for state management and successfully uploaded it to the Play Store for wider accessibility.',
         'Collaborated effectively with a diverse team, to achieve project goals and ensure seamless coordination in all aspects of development.',
@@ -98,7 +98,7 @@ class LandingController extends GetxController {
       title: 'Intern Mobile Developer',
       companyName: 'BNNP Jawa Timur (Surabaya, Indonesia)',
       urlImageCompany: ImageAssetsConst.logoBnnpJatim,
-      date: 'November 2022 - Present',
+      date: 'January 2022 - February 2022',
       descriptions: [
         'Designed and developed the \'Simpel BNNP Jatim\' Android mobile app to provide services like urine test request, appointments, rehabilitation, complaints, and a chat feature with BNNP Jatim for an easy and efficient communication channel for questions, feedback, or assistance. Utilized Flutter technology with GetX as the state management and Firebase for Real-Time Chatting Database. And successfully uploaded the application to the Play Store.',
       ],
@@ -176,8 +176,7 @@ class LandingController extends GetxController {
             'https://raw.githubusercontent.com/achyusuf10/assets_storage/main/portofolio/cover_simpel_bnnp.webp',
         desc:
             """SIMPEL or the East Java BNNP Service Information System, is an application belonging to the East Java BNNP. """
-            """This application can make it easier for the public to make requests, rehabilitation and complaints if they find people who abuse drugs. """
-            """The features offered are making requests for socialization, hearings, personal and institutional urine tests, legal process rehabilitation, personal and institutional rehabilitation as well as complaints or reports if they find people abusing drugs.""",
+            """This application offers making requests for socialization, hearings, personal and institutional urine tests, legal process rehabilitation, personal and institutional rehabilitation as well as complaints or reports if they find people abusing drugs.""",
         skills: [
           'Flutter',
           'GetX State Management',

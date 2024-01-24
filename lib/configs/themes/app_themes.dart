@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_portofolio/configs/themes/app_colors.dart';
 import 'package:my_portofolio/configs/themes/app_fonts.dart';
+import 'package:my_portofolio/configs/themes/app_text_styles.dart';
 
 class AppThemes {
   AppThemes._();
 
   static ThemeData lightTheme = ThemeData(
+    appBarTheme: AppBarTheme(
+      titleTextStyle: AppTextStyleMobile.headingH1SemiBold.copyWith(
+        fontSize: 60.sp,
+      ),
+    ),
     textTheme: const TextTheme().copyWith(
       bodyMedium: const TextStyle(color: AppColorsLight.gray600),
     ),
@@ -32,6 +39,11 @@ class AppThemes {
     useMaterial3: true,
   );
   static ThemeData darkTheme = ThemeData(
+    appBarTheme: AppBarTheme(
+      titleTextStyle: AppTextStyleMobile.headingH1SemiBold.copyWith(
+        fontSize: 60.sp,
+      ),
+    ),
     textTheme: const TextTheme().copyWith(
       bodyMedium: const TextStyle(color: AppColorsDark.gray600),
     ),

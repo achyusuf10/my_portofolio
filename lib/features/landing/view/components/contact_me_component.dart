@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:my_portofolio/configs/themes/app_colors.dart';
 import 'package:my_portofolio/configs/themes/app_text_styles.dart';
 import 'package:my_portofolio/constants/core/svg_assets_const.dart';
+import 'package:my_portofolio/utils/functions/get_responsive_value_func.dart';
 import 'package:my_portofolio/utils/functions/insert_color_func.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -15,9 +16,20 @@ class ContactMeComponent extends StatelessWidget {
     return Container(
       width: double.infinity,
       color: Theme.of(context).colorScheme.primaryContainer,
-      padding: EdgeInsets.symmetric(
-        horizontal: 80.w,
-        vertical: 70.h,
+      padding: GetResponsiveValueFunc.call<EdgeInsets>(
+        context,
+        mobile: EdgeInsets.symmetric(
+          horizontal: 16.w,
+          vertical: 64.h,
+        ),
+        tablet: EdgeInsets.symmetric(
+          horizontal: 50.w,
+          vertical: 70.h,
+        ),
+        desktop: EdgeInsets.symmetric(
+          horizontal: 80.w,
+          vertical: 70.h,
+        ),
       ),
       child: Column(
         children: [
@@ -44,7 +56,12 @@ class ContactMeComponent extends StatelessWidget {
           ),
           Text(
             'What’s next? Feel free to reach out to me if you\'re looking for a developer, have a query, or simply want to connect.',
-            style: AppTextStyleDesktop.subtitleNormal,
+            style: GetResponsiveValueFunc.call<TextStyle>(
+              context,
+              mobile: AppTextStyleTabletMobile.subtitleNormal,
+              tablet: AppTextStyleTabletMobile.subtitleNormal,
+              desktop: AppTextStyleDesktop.subtitleNormal,
+            ),
           ),
           SizedBox(
             height: 48.h,
@@ -67,7 +84,12 @@ class ContactMeComponent extends StatelessWidget {
               20.horizontalSpace,
               Text(
                 'achyusufbagus@gmail.com',
-                style: AppTextStyleDesktop.headingH2SemiBold,
+                style: GetResponsiveValueFunc.call(
+                  context,
+                  mobile: AppTextStyleTabletMobile.headingH2SemiBold,
+                  desktop: AppTextStyleDesktop.headingH2SemiBold,
+                  tablet: AppTextStyleTabletMobile.headingH2SemiBold,
+                ),
               ),
               10.horizontalSpace,
               IconButton(
@@ -120,7 +142,12 @@ class ContactMeComponent extends StatelessWidget {
               20.horizontalSpace,
               Text(
                 '+62 898-399-795-8',
-                style: AppTextStyleDesktop.headingH2SemiBold,
+                style: GetResponsiveValueFunc.call(
+                  context,
+                  mobile: AppTextStyleTabletMobile.headingH2SemiBold,
+                  desktop: AppTextStyleDesktop.headingH2SemiBold,
+                  tablet: AppTextStyleTabletMobile.headingH2SemiBold,
+                ),
               ),
               10.horizontalSpace,
               IconButton(

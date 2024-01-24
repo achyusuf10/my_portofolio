@@ -80,7 +80,7 @@ class CustomButtonWidget extends StatelessWidget {
   const CustomButtonWidget.child({
     Key? key,
     this.onTap,
-    this.elevation = 4,
+    this.elevation = 0,
     this.borderRadius,
     required this.child,
     this.minimumHeight,

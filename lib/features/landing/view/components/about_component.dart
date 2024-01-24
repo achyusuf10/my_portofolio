@@ -4,7 +4,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:my_portofolio/configs/themes/app_colors.dart';
 import 'package:my_portofolio/configs/themes/app_text_styles.dart';
 import 'package:my_portofolio/constants/core/svg_assets_const.dart';
-import 'package:my_portofolio/shared/widgets/responsive_widget.dart';
+import 'package:my_portofolio/utils/functions/get_current_layout_func.dart';
+import 'package:my_portofolio/utils/functions/get_responsive_value_func.dart';
 import 'package:my_portofolio/utils/functions/insert_color_func.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -15,57 +16,75 @@ class AboutDesktopComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveWidget.isDesktop(context)
-        ? Container(
-            width: double.infinity,
-            color: Theme.of(context).colorScheme.primaryContainer,
-            padding: EdgeInsets.symmetric(
-              horizontal: 80.w,
-              vertical: 70.h,
+    return Container(
+      width: double.infinity,
+      color: Theme.of(context).colorScheme.primaryContainer,
+      padding: GetResponsiveValueFunc.call<EdgeInsets>(
+        context,
+        mobile: EdgeInsets.symmetric(
+          horizontal: 16.w,
+          vertical: 64.h,
+        ),
+        tablet: EdgeInsets.symmetric(
+          horizontal: 50.w,
+          vertical: 70.h,
+        ),
+        desktop: EdgeInsets.symmetric(
+          horizontal: 80.w,
+          vertical: 70.h,
+        ),
+      ),
+      child: GetResponsiveValueFunc.call<Widget>(
+        context,
+        mobile: Column(
+          children: [
+            Image.network(
+              'https://raw.githubusercontent.com/achyusuf10/assets_storage/main/portofolio/photo_yusuf.png',
+              height: 450.h,
+              fit: BoxFit.fitHeight,
             ),
-            child: Column(
+            48.verticalSpace,
+            const _DescComponent(),
+            48.verticalSpace,
+            const _LinkComponent()
+          ],
+        ),
+        tablet: Column(
+          children: [
+            Image.network(
+              'https://raw.githubusercontent.com/achyusuf10/assets_storage/main/portofolio/photo_yusuf.png',
+              height: 600.h,
+              fit: BoxFit.fitHeight,
+            ),
+            48.verticalSpace,
+            const _DescComponent(),
+            48.verticalSpace,
+            const _LinkComponent()
+          ],
+        ),
+        desktop: Column(
+          children: [
+            Row(
               children: [
-                Row(
-                  children: [
-                    const Expanded(
-                      child: _DescComponent(),
-                    ),
-                    SizedBox(
-                      width: 128.w,
-                    ),
-                    Image.network(
-                      'https://raw.githubusercontent.com/achyusuf10/assets_storage/main/portofolio/photo_yusuf.png',
-                      height: 320.h,
-                      width: 320.h,
-                    ),
-                  ],
+                const Expanded(
+                  child: _DescComponent(),
                 ),
-                48.verticalSpace,
-                const _LinkComponent()
-              ],
-            ),
-          )
-        : Container(
-            width: double.infinity,
-            color: Theme.of(context).colorScheme.primaryContainer,
-            padding: EdgeInsets.symmetric(
-              horizontal: 16.w,
-              vertical: 64.h,
-            ),
-            child: Column(
-              children: [
+                SizedBox(
+                  width: 128.w,
+                ),
                 Image.network(
                   'https://raw.githubusercontent.com/achyusuf10/assets_storage/main/portofolio/photo_yusuf.png',
-                  height: 450.h,
-                  fit: BoxFit.fitHeight,
+                  height: 320.h,
+                  width: 320.h,
                 ),
-                48.verticalSpace,
-                const _DescComponent(),
-                48.verticalSpace,
-                const _LinkComponent()
               ],
             ),
-          );
+            48.verticalSpace,
+            const _LinkComponent()
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -79,7 +98,7 @@ class _DescComponent extends StatelessWidget {
       children: [
         Text(
           'Hi, I’m Yusuf 👋',
-          style: ResponsiveWidget.isDesktop(context)
+          style: GetCurrentLayoutFunc.isDesktop(context)
               ? AppTextStyleDesktop.headingH1Bold.copyWith(
                   color: InsertColorFunc.call(
                     context: context,

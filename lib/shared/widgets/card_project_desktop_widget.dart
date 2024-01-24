@@ -10,10 +10,10 @@ import 'package:my_portofolio/utils/extensions/iteration_ext.dart';
 import 'package:my_portofolio/utils/functions/insert_color_func.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class CardProjectWidget extends StatelessWidget {
+class CardProjectDesktopWidget extends StatelessWidget {
   final bool isCurrentlyShow;
   final ProjectModel workModel;
-  const CardProjectWidget({
+  const CardProjectDesktopWidget({
     super.key,
     required this.workModel,
     required this.isCurrentlyShow,

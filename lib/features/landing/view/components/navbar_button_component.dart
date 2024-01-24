@@ -8,6 +8,7 @@ import 'package:my_portofolio/configs/themes/app_text_styles.dart';
 import 'package:my_portofolio/constants/core/svg_assets_const.dart';
 import 'package:my_portofolio/shared/widgets/button/custom_button_widget.dart';
 import 'package:my_portofolio/utils/extensions/iteration_ext.dart';
+import 'package:my_portofolio/utils/functions/get_responsive_value_func.dart';
 import 'package:my_portofolio/utils/functions/insert_color_func.dart';
 import 'package:my_portofolio/utils/loggers/app_logger.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -39,9 +40,20 @@ class NavbarButtonDesktopComponent extends StatelessWidget {
         ),
         color: Theme.of(context).colorScheme.primaryContainer,
       ),
-      padding: EdgeInsets.symmetric(
-        horizontal: 80.w,
-        vertical: 16.h,
+      padding: GetResponsiveValueFunc.call<EdgeInsets>(
+        context,
+        mobile: EdgeInsets.symmetric(
+          horizontal: 16.w,
+          vertical: 16.h,
+        ),
+        tablet: EdgeInsets.symmetric(
+          horizontal: 50.w,
+          vertical: 16.h,
+        ),
+        desktop: EdgeInsets.symmetric(
+          horizontal: 80.w,
+          vertical: 16.h,
+        ),
       ),
       child: Row(
         children: [

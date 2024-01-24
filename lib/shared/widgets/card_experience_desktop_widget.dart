@@ -7,9 +7,9 @@ import 'package:my_portofolio/shared/models/experience_model.dart';
 import 'package:my_portofolio/utils/extensions/iteration_ext.dart';
 import 'package:my_portofolio/utils/functions/insert_color_func.dart';
 
-class CardExperienceWidget extends StatelessWidget {
+class CardExperienceDesktopWidget extends StatelessWidget {
   final ExperienceModel data;
-  const CardExperienceWidget({
+  const CardExperienceDesktopWidget({
     super.key,
     required this.data,
   });
