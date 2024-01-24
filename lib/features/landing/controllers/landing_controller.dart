@@ -159,26 +159,30 @@ class LandingController extends GetxController {
         'VS Code',
         'Git',
       ],
+
       title: 'Manowa',
-      urlExternalLink:
-          'https://install.appcenter.ms/users/achyusuf10/apps/manowa/distribution_groups/production',
+      // urlExternalLink:
+      //     'https://install.appcenter.ms/users/achyusuf10/apps/manowa/distribution_groups/production',
+      urlPlaystore:
+          'https://play.google.com/store/apps/details?id=yucodelabs.manowa_apps&hl=en',
       urlGithub: 'https://github.com/achyusuf10/manowa_apps/tree/main',
     ),
     ProjectModel(
-        urlImage:
-            'https://raw.githubusercontent.com/achyusuf10/assets_storage/main/portofolio/cover_my_leadershiip.png',
-        desc:
-            """The "My LeaderSiiip" is an innovative platform designed for the upcoming 2024 elections. This feature enables individuals to actively participate in shaping the future leadership by evaluating and selecting potential candidates deserving of public support.""",
-        skills: [
-          'Flutter',
-          'GetX State Management',
-          'VS Code',
-          'Git',
-          'Team Work',
-        ],
-        title: 'My LeaderSiiip',
-        urlPlaystore:
-            'https://play.google.com/store/apps/details?id=com.kediriapp.myLeaderSiiip&hl=en'),
+      urlImage:
+          'https://raw.githubusercontent.com/achyusuf10/assets_storage/main/portofolio/cover_my_leadershiip.png',
+      desc:
+          """The "My LeaderSiiip" is an innovative platform designed for the upcoming 2024 elections. This feature enables individuals to actively participate in shaping the future leadership by evaluating and selecting potential candidates deserving of public support.""",
+      skills: [
+        'Flutter',
+        'GetX State Management',
+        'VS Code',
+        'Git',
+        'Team Work',
+      ],
+      title: 'My LeaderSiiip',
+      urlPlaystore:
+          'https://play.google.com/store/apps/details?id=com.kediriapp.myLeaderSiiip&hl=en',
+    ),
     ProjectModel(
         urlImage:
             'https://raw.githubusercontent.com/achyusuf10/assets_storage/main/portofolio/cover_teman_bunda_ita.png',
